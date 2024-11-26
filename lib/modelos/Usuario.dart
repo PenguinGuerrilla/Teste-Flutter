@@ -30,8 +30,8 @@ class Usuario {
   Future<int> insereUsuario() async {
     final db = await Banco.instance.database;
     return db.rawInsert("""
-    insert or replace into user(username,password,ultimo_login)
-    values('$username','$password','$ultimoLogin')
+    insert or replace into user(username,password)
+    values('$username','$password')
     """);
   }
 

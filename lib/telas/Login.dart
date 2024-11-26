@@ -22,7 +22,7 @@ class _LoginState extends State<Login> {
 
     Usuario.verificaUsuario().then((user) {
       if (user != null) {
-        Navigator.pushNamed(context, '/formulario');
+        Navigator.pushNamed(context, '/dashboard');
       }
     });
   }

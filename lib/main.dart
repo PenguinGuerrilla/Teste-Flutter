@@ -1,6 +1,11 @@
+import 'package:bagun/modelos/Usuario.dart';
+import 'package:bagun/telas/BuscaAlimentos.dart';
+import 'package:bagun/telas/Dashboard.dart';
+import 'package:bagun/telas/Metas.dart';
+import 'package:bagun/telas/User.dart';
 import 'package:bagun/telas/pesquisacep.dart';
 import 'package:flutter/material.dart';
-import 'package:bagun/telas/Formulario.dart';
+import 'package:bagun/telas/Dashboard.dart';
 import 'package:bagun/telas/Login.dart';
 
 void main() {
@@ -13,11 +18,13 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
+      initialRoute: '/dashboard',
       routes: {
         '/': (context)=> Login(),
-        '/formulario': (context) => Formulario(),
-        '/pesquisacep': (context) => PesquisaCep()
+        '/dashboard': (context) => Dashboard(),
+        '/metas': (context) => Metas(),
+        '/buscaAlimentos': (context) => BuscaAlimentos(),
+        '/user': (context) => User()
       },
     );
   }
